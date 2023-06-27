@@ -18,7 +18,7 @@
     <p style="color:purple;font-family:Times New Roman;">Cantidad de Doctores Registrados: {{cantidad}}</p>
 </div>
 <div>
-    <a class="btn btn-primary"  href="Eliminar_Doctor/">Eliminar_Doctor</a>
+    <a class="btn btn-primary"  href="Nuevo_Doctor/">Nuevo_Doctor</a>
 </div>
 <div class="table-responsive" align="center">
 <table class="table table-success table-striped table-hover table-bordered table=sm align-middle caption=top">
@@ -46,7 +46,7 @@
                <td >{{Doctor.especialidad | upper}}</td>
                <td >{{Doctor.activo | upper}}</td>
                <td >{{Doctor.turno.turno }}</td>
-               <td ><a class="btn bg-info" href="Nuevo_Doctor/{{Doctor.id}}">Nuevo_Doctor</a></td>
+               <td ><a class="btn bg-info" href="Eliminar_Doctor/{{Doctor.id}}">Eliminar_Doctor</a></td>
                <td ><a class="btn bg-warning" href="Editar_Doctor/{{Doctor.id}}">Editar_Doctor</a></td>
                <td ><a class="btn bg-success" href="Ver_Doctor/{{Doctor.id}}">Ver_Doctor</a></td>
            </tr>

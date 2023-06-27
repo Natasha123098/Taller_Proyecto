@@ -36,7 +36,7 @@ def Editar_Doctor(request, idDoctor):
     return HttpResponse(pagina.render(mensaje, request))
 
 def Ver_Doctor(request, idDoctor):
-    pagina = loader.get_template('doctores.html')
+    pagina = loader.get_template('Ver_Doctor.html')
     #doctor = Doctor.objects.get(pk=idDoctor)
     doctor = get_object_or_404(Doctor, pk=idDoctor)
     mensaje = {'doctor': doctor}
