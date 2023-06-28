@@ -39,7 +39,14 @@ def Ver_Doctor(request, idDoctor):
     pagina = loader.get_template('Ver_Doctor.html')
     #doctor = Doctor.objects.get(pk=idDoctor)
     doctor = get_object_or_404(Doctor, pk=idDoctor)
-    mensaje = {'doctor': doctor}
+    if request.method == 'GET':
+        formulario= DoctorFormulario(instance=doctor)
+    elif request.method == 'POST':
+        formulario= DoctorFormulario(request.POST, instance=doctor)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('inicio')
+    mensaje = {'formulario': formulario}
     return HttpResponse(pagina.render(mensaje, request))
 
 def Eliminar_Doctor(request, idDoctor):
