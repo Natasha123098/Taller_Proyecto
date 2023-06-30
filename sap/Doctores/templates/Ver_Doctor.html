@@ -13,12 +13,13 @@
          <h1 style="color:orange;font-family:Arial;">Ver Doctor</h1>
     </fieldset>
 <div>
-    <form method="POST">
-    <table>
-        {{formulario}}
-    </table>
-    </form>
+    <p>Nombre: {{doctor.nombre}}</p>
+    <p>Apellido: {{doctor.apellido}}</p>
+    <p>Sexo: {{doctor.sexo}}</p>
+    <p>Email: {{doctor.email}}</p>
+    <p>Especialidad: {{doctor.especialidad}}</p>
 </div>
+
 
 <div>
      <a href="{%url 'inicio' %}">Regresar</a>

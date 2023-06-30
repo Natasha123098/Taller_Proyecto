@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
     <title>Sistemas de Administración de Doctores</title>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -17,9 +20,11 @@
 
     <p style="color:purple;font-family:Times New Roman;">Cantidad de Doctores Registrados: {{cantidad}}</p>
 </div>
-<div>
-    <a class="btn btn-primary"  href="Nuevo_Doctor/">Nuevo_Doctor</a>
+<div align="center">
+    <a class="btn btn-primary"  href="Nuevo_Doctor/"><i class="fa-solid fa-user-plus"></i></a>
+    <a class="btn btn-primary"  href="Registro_Doctor/"><i class="fa-regular fa-file-excel"></i></a>
 </div>
+
 <div class="table-responsive" align="center">
 <table class="table table-success table-striped table-hover table-bordered table=sm align-middle caption=top">
 

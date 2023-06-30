@@ -6,10 +6,10 @@ from Doctores.models import Doctor
 
 
 # Create your views here.
-def mostrarDoctores(request):
-
-    C_doctores = Doctor.objects.count()
-    pagina = loader.get_template('doctores.html')
-    nombres_doctores = Doctor.objects.all()
-    datos = {'cantidad': C_doctores, 'doctores': nombres_doctores}
+def mostrar_Doctores(request):
+    cantidad_Doctores = Doctor.objects.count()
+    pagina= loader.get_template('doctores.html')
+    #lista_Doctores = Doctor.objects.all()
+    lista_Doctores = Doctor.objects.order_by('apellido', 'nombre')
+    datos = {'cantidad': cantidad_Doctores,'doctores':lista_Doctores}
     return HttpResponse(pagina.render(datos, request))
