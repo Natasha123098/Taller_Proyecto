@@ -65,15 +65,17 @@ def Registro_Doctor(request):
     # Creamos los encabezados desde la celda B3 hasta la E3
     ws['B3'] = 'NOMBRE'
     ws['C3'] = 'APELLIDO'
-    ws['D3'] = 'EMAIL'
-    ws['E3'] = 'ESPECIALIDAD'
-    cont = 4
+    ws['D3'] = 'SEXO'
+    ws['E3'] = 'EMAIL'
+    ws['F3'] = 'ESPECIALIDAD'
+    cont = 5
     # Recorremos el conjunto de personas y vamos escribiendo cada uno de los datos en las celdas
     for doctor in doctores:
         ws.cell(row=cont, column=2).value = doctor.nombre
         ws.cell(row=cont, column=3).value = doctor.apellido
-        ws.cell(row=cont, column=4).value = doctor.email
-        ws.cell(row=cont, column=5).value = doctor.especialidad
+        ws.cell(row=cont, column=4).value = doctor.sexo
+        ws.cell(row=cont, column=5).value = doctor.email
+        ws.cell(row=cont, column=6).value = doctor.especialidad
         cont = cont + 1
     # Establecemos el nombre del archivo
     nombre_archivo = "ReporteDoctoresExcel.xlsx"

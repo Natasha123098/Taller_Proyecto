@@ -7,7 +7,7 @@ class DoctorFormulario(ModelForm):
 
     class Meta:
         model = Doctor
-        fields = ('nombre', 'apellido', 'sexo', 'email', 'especialidad', 'activo', 'turno', 'experiencia')
+        fields = ('nombre', 'apellido', 'sexo', 'email', 'especialidad', 'activo', 'turno', 'experiencia', 'lugar')
         widgets = {
             'email': EmailInput(attrs={'type': 'email'})
         }

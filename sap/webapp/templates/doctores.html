@@ -38,6 +38,7 @@
         <th>Especialidad</th>
         <th>Activo</th>
         <th>Turno</th>
+        <th>Lugar</th>
 
     </tr>
     <tbody class="table-group-divider">
@@ -51,6 +52,7 @@
                <td >{{Doctor.especialidad | upper}}</td>
                <td >{{Doctor.activo | upper}}</td>
                <td >{{Doctor.turno.turno }}</td>
+               <td >{{Doctor.lugar}}</td>
                <td ><a class="btn bg-info" href="Eliminar_Doctor/{{Doctor.id}}">Eliminar_Doctor</a></td>
                <td ><a class="btn bg-warning" href="Editar_Doctor/{{Doctor.id}}">Editar_Doctor</a></td>
                <td ><a class="btn bg-success" href="Ver_Doctor/{{Doctor.id}}">Ver_Doctor</a></td>

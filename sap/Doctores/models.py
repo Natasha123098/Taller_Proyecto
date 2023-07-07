@@ -1,6 +1,10 @@
 from django.db import models
 
+class Lugar_Trabajo(models.Model):
+    lugar = models.CharField(max_length=50, null=True)
 
+    def __str__(self):
+        return f'{self.lugar}'
 
 class TurnoTrabajo(models.Model):
     turno = models.CharField(max_length=50, null=True)
@@ -29,6 +33,7 @@ class Doctor(models.Model):
     activo = models.BooleanField(default=True)
     turno = models.ForeignKey(TurnoTrabajo, on_delete=models.SET_NULL, null=True)
     experiencia= models.ForeignKey(Experiencia, on_delete=models.SET_NULL, null=True)
+    lugar = models.ForeignKey(Lugar_Trabajo, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return f'id: {self.id} - {self.nombre} {self.apellido}'

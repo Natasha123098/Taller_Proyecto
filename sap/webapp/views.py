@@ -11,5 +11,5 @@ def mostrar_Doctores(request):
     pagina= loader.get_template('doctores.html')
     #lista_Doctores = Doctor.objects.all()
     lista_Doctores = Doctor.objects.order_by('apellido', 'nombre')
-    datos = {'cantidad': cantidad_Doctores,'doctores':lista_Doctores}
+    datos = {'cantidad': cantidad_Doctores,'doctores': lista_Doctores}
     return HttpResponse(pagina.render(datos, request))
